@@ -1,0 +1,44 @@
+﻿@model Introducao.Models.Pessoa
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Curso de Csharp</h2>
+<p>Curso feito com Davi Alves de Souza</p>
+
+<hr />
+
+@using (Html.BeginForm("Lista", "Home", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Informações de Pessoas</legend>
+    </fieldset>
+
+    <div class="form-group">
+        <label for="PessoaId">@Html.LabelFor(x => x.PessoaId)</label>
+        <input type="number" class="form-control" value="@Model.PessoaId" name="PessoaId">
+    </div>
+
+    <div class="form-group">
+        <label for="PessoaId">@Html.LabelFor(x => x.Nome)</label>
+        <input type="text" class="form-control" value="@Model.Nome" name="Nome">
+    </div>
+
+    <div class="form-group">
+        <label for="PessoaId">@Html.LabelFor(x => x.Tipo)</label>
+        <input type="text" class="form-control" value="@Model.Tipo" name="Tipo">
+    </div>
+
+
+    <br />
+
+    <div>
+        <input class="btn btn-primary" type="submit" name="Button" value="Enviar" />
+    </div>
+}
+<br />
+
+<!--
+
+-->

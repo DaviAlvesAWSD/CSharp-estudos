@@ -1,0 +1,46 @@
+﻿@model Introducao.Models.Pessoa
+
+@{
+    ViewBag.Title = "Lista";
+}
+
+<style>
+
+    b {
+        margin: 10px;
+        padding: 0
+    };
+
+</style>
+
+<h2>Lista</h2>
+<br />
+<table class="table table-hover ">
+    <thead style="background-color: #4e342e; color:white;">
+        <tr>
+            <th scope="col">@Html.LabelFor(x => x.PessoaId)</th>
+            <th scope="col">@Html.LabelFor(x => x.Nome)</th>
+            <th scope="col">@Html.LabelFor(x => x.Tipo)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">@Model.PessoaId</th>
+            <td>@Model.Nome</td>
+            <td>@Model.Tipo</td>
+        </tr>
+        <tr>
+            <th scope="row">@Model.PessoaId</th>
+            <td>@Model.Nome</td>
+            <td>@Model.Tipo</td>
+        </tr>
+        <tr>
+            <th scope="row">@Model.PessoaId</th>
+            <td>@Model.Nome</td>
+            <td>@Model.Tipo</td>
+        </tr>
+    </tbody>
+</table>
+
+
+@Html.ActionLink("Voltar", "Index", "Home", new {@class = "btn btn-primary" })
